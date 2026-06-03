@@ -282,40 +282,27 @@ backTop.addEventListener("click", () => {
 
 emailjs.init("1wchLx6WIe6KNUrYf");
 
-const contactForm =
-    document.getElementById("contact-form");
-
-contactForm.addEventListener(
-    "submit",
-    function (e) {
-
+document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (e) {
         e.preventDefault();
 
-        emailjs.sendForm(
-            "service_xpnkns7",
-            "template_ujw9er",
-            this
-        )
+        emailjs
+            .sendForm(
+                "service_xpnkns7",
+                "template_ujw9er",
+                this
+            )
             .then(() => {
-
-                alert(
-                    "Message sent successfully 🚀"
-                );
-
-                contactForm.reset();
-
+                alert("Message Sent Successfully!");
             })
             .catch((error) => {
-
                 console.error(error);
-
-                alert(
-                    "Failed to send message."
-                );
-
+                alert("Failed to send message");
             });
-
     });
+
+
 const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navbar");
 
