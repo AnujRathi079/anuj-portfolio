@@ -290,7 +290,7 @@ document
         emailjs
             .sendForm(
                 "service_xpnkns7",
-                "template_ujw9er",
+                "template_ujw9ere",
                 this
             )
             .then(() => {
